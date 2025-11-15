@@ -21,7 +21,6 @@ function Input () {
 
   return (
     <>
-      <h1>Прогноз погоди</h1>
       <input
         type='text'
         value={city}
