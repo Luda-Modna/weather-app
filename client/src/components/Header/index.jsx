@@ -1,14 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
+import styles from './Header.module.sass';
 
 function Header () {
   return (
-    <nav>
-      <Link to='/'>Home</Link>
-      <Link to='/login'>Login</Link>
-      <Link to='/signin'>Sign In</Link>
-      <Link to='/favorite'>Favorite</Link>
-    </nav>
+    <header className={styles.header}>
+      <Link className={styles.logoContainer} to='/'>
+        <img className={styles.logo} src='./logo.png' alt='logo' />
+      </Link>
+      <nav className={styles.navHeader}>
+        <NavLink className={styles.bttn} to='/login'>Login</NavLink>
+        <NavLink className={styles.bttn} to='/signin'>Sign In</NavLink>
+      </nav>
+    </header>
   );
 }
 
