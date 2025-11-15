@@ -1,14 +1,21 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
-const Home = ({ weather }) => {
+const Home = () => {
+  const { weather, loading, error } = useSelector(state => state.weather);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>{error}</p>;
   if (!weather) return null;
 
   return (
-    <div style={{ border: '1px solid #ccc', padding: '1rem', borderRadius: '1rem', width: '300px', margin: '1rem auto', textAlign: 'center' }}>
-      <h2>{weather.name}, {weather.sys?.country}</h2>
-      <p>Температура: {weather.main.temp}°C</p>
-      <p>Вологість: {weather.main.humidity}%</p>
-      <p>Вітер: {weather.wind.speed} м/с</p>
+    <div>
+      <h2>
+        {weather.name}, {weather.sys?.country}
+      </h2>
+      <p>Temperature: {weather.main.temp}°C</p>
+      <p>Humidity: {weather.main.humidity}%</p>
+      <p>Wind: {weather.wind.speed} м/с</p>
       <p>{weather.weather[0].description}</p>
     </div>
   );
