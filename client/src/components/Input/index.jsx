@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { getWeatherThunk } from './../../store/slices/weatherSlice';
 import { useDispatch } from 'react-redux';
+import styles from './Input.module.sass';
 
 function Input () {
   const dispatch = useDispatch();
@@ -20,16 +21,17 @@ function Input () {
   };
 
   return (
-    <>
+    <div className={styles.container}>
       <input
+        className={styles.input}
         type='text'
         value={city}
         placeholder='Enter city'
         onChange={e => setCity(e.target.value)}
         onKeyDown={handleKeyDown}
       />
-      <button onClick={handleSearch}>Get</button>
-    </>
+      <button className={styles.bttnInput} onClick={handleSearch}>Get</button>
+    </div>
   );
 }
 

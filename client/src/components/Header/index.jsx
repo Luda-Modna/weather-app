@@ -9,8 +9,12 @@ function Header () {
         <img className={styles.logo} src='./logo.png' alt='logo' />
       </Link>
       <nav className={styles.navHeader}>
-        <NavLink className={styles.bttn} to='/login'>Login</NavLink>
-        <NavLink className={styles.bttn} to='/signin'>Sign In</NavLink>
+        <NavLink className={styles.bttn} to='/login'>
+          Login
+        </NavLink>
+        <NavLink className={styles.bttn} to='/signup'>
+          Sign Up
+        </NavLink>
       </nav>
     </header>
   );
