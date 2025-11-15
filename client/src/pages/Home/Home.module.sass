@@ -1,0 +1,78 @@
+.hero
+  max-width: 900px
+  margin: 4rem auto 3rem
+  text-align: center
+
+.heroTitle
+ font-size: 3rem
+ font-weight: 700
+ margin-bottom: 1rem
+ color: #111
+
+.heroText
+ font-size: 1.25rem
+ font-weight: 400
+ color: #4b4b4b
+ line-height: 1.6
+
+.heroSpan
+ font-weight: 600
+ color: #000
+
+
+.search
+  max-width: 600px
+  margin: 2rem auto
+  text-align: center
+
+.loading
+  font-size: 1.1rem
+  margin-top: 0.8rem
+
+.error
+  font-size: 1.1rem
+  margin-top: 0.8rem
+  color: #d00000
+  font-weight: 600
+
+
+.forecast
+  max-width: 1100px
+  margin: 3rem auto
+  text-align: center
+
+.forecastTitle
+ margin-bottom: 2rem
+ font-size: 2rem
+ font-weight: 700
+ color: #111
+
+
+.forecastList
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+  gap: 1.5rem
+  padding: 0
+  list-style: none
+
+
+.forecastItem
+ background: #fff
+ padding: 1.5rem
+ border-radius: 14px
+ box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06) 
+ transition: all 0.2s ease
+ cursor: pointer
+ display: flex
+ flex-direction: column
+ align-items: center
+ text-align: center
+
+ &:hover
+  transform: translateY(-4px)
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08)   
+
+.forecastText
+ margin: 0.4rem 0
+ font-size: 1.1rem
+ color: #222
