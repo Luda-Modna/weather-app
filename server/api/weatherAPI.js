@@ -71,7 +71,7 @@ const groupForecast = list => {
 module.exports = async city => {
   try {
     const { data } = await axios.get(`${BASE_URL}/forecast`, {
-      params: { q: city, units: 'metric', lang: 'ua', appid: API_KEY },
+      params: { q: city, units: 'metric', lang: 'en', appid: API_KEY },
     });
 
     return {

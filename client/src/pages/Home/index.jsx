@@ -32,7 +32,7 @@ const Home = () => {
           </h2>
           <ul className={styles.forecastList}>
             {weather.daily.map((day, i) => (
-              <li className={styles.forecastItem}>
+              <li key={i} className={styles.forecastItem}>
                 <p className={styles.forecastText}>{day.date}</p>
                 <p className={styles.forecastText}>{day.temp} °C</p>
                 <p className={styles.forecastText}>{day.description}</p>
