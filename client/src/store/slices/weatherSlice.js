@@ -16,7 +16,9 @@ export const getWeatherThunk = createAsyncThunk(
       const data = await API.getWeather(city);
       return data;
     } catch (err) {
-      return rejectWithValue({ errors: err.response.data });
+      return rejectWithValue(
+        err.response?.data?.message || 'Failed to fetch weather'
+      );
     }
   }
 );
